@@ -1,0 +1,429 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@BranchID`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`ED.IssueDateTime`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`@BranchIDCustomer`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`@BranchIDCustomer`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`@DownloadedXml`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`ED.IssueDateTime`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`@TimeSignedXml`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`@TimeSignedXml`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`ED.IssueDateTime.Timestamp`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`ED.IssueDateTime`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`ED.IssueDateTime`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTA.BTP.ID`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTA.BTP.ID`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTA.BTP.Name`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTA.BTP.STR.ID`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTA.BTP.STR.ID`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTS.STSHMS.GrandTotalAmount`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTS.STSHMS.GrandTotalAmount`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTS.STSHMS.LineTotalAmount`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTS.STSHMS.LineTotalAmount`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTS.STSHMS.TaxTotalAmount`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTS.STSHMS.TaxTotalAmount`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "objectID",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DocType`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "objectID",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DownloadedXml`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`@BranchIDCustomer`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DownloadedXml`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`ED.IssueDateTime.Timestamp`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DownloadedXml`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`ED.IssueDateTime`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DownloadedXml`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`ED.IssueDateTime`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DownloadedXml`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTA.BTP.Name`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DownloadedXml`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTA.BTP.Name`",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@DownloadedXml`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`SCTT.AHTA.BTP.STR.ID`",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Docs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "`@SignedXmlUrl`",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "`@TimeUpdated`",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

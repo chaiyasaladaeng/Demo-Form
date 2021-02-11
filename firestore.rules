@@ -1,0 +1,89 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ### functions ###
+    // key0 return first part of key pair
+		// ex. input is id001_id002 it will return id001
+    function key0(s) {
+    	return s.split('_')[0];
+    }
+    function key1(s) {
+    	return s.split('_')[1];
+    }
+  	function isNewCompany(company) {
+    	return !exists(/databases/$(database)/documents/Companies/$(company));
+    }
+    function getCompaniesUsers(company) {
+    	let key = company + '_' + request.auth.uid;
+      return get(/databases/$(database)/documents/CompaniesUsers/$(key)).data;
+    }
+		function isSignInUser(user) {
+    	return user == request.auth.uid;
+    }
+    // function isSignIn() {
+    // 	return request.auth != null;
+    // }
+    
+		// ### match rules ###
+		match /Companies/{company}/Docs/{doc} {
+			allow read: if getCompaniesUsers(company).isDocsReader;
+      allow write: if getCompaniesUsers(company).isDocsWriter;
+		}
+    match /Companies/{company}/Branches/{branch} {
+			allow read: if getCompaniesUsers(company).isDocsReader;
+      allow write: if getCompaniesUsers(company).isDocsWriter;
+		}
+    match /Companies/{company}/Usages/{document=**} {
+			allow read: if getCompaniesUsers(company).isPaymentAdmin;
+		}
+    match /Companies/{company}/Invoices/{document=**} {
+			allow read: if getCompaniesUsers(company).isPaymentAdmin;
+		}
+    match /Companies/{company}/PaymentSettings/{document=**} {
+			allow read: if getCompaniesUsers(company).isPaymentAdmin;
+		}
+    match /Companies/{company}/Statuses/{document=**} {
+			allow read: if getCompaniesUsers(company).isDocsReader;
+		}
+		match /Companies/{company}/DocsDownloaded/{doc} {
+			allow read: if getCompaniesUsers(company).isDocsReader;
+		}
+    match /Companies/{company}/Cers/{cer} {
+      allow read, write: if getCompaniesUsers(company).isDocsWriter;
+		}
+    match /Companies/{company} {
+    	allow read, write: if getCompaniesUsers(company).isAdmin;
+    }
+    match /CompaniesUsers/{companyUser} {
+    	allow create: if isNewCompany(key0(companyUser)) && isSignInUser(key1(companyUser));
+    }
+    match /CompaniesUsers/{companyUser} {
+    	allow read: if resource.data.userID == request.auth.uid || getCompaniesUsers(resource.data.companyID).isAdmin;
+    	allow write: if getCompaniesUsers(key0(companyUser)).isAdmin;
+    }
+    match /CompaniesPayments/{companyPayment} {
+    	allow read, write: if getCompaniesUsers(key0(companyPayment)).isPaymentAdmin;
+    }
+    match /Users/{user}/{document=**} {
+    	allow read, write: if isSignInUser(user);
+    }
+    match /Settings/{document=**} {
+    	allow read: if true;
+    }
+    match /PaymentPlans/{document=**} {
+    	allow read: if true;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    match /Companies/{company}/Summaries/{document=**} {
+      allow read, write: if getCompaniesUsers(company).isAdmin;
+    }
+    match /Companies/{company}/Databases/{db} {
+			allow read, write: if getCompaniesUsers(company).isDocsWriter;
+		}
+    match /RegistersUsers/{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
